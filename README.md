@@ -12,6 +12,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+### `Defaultly running files`
+1- src/index.js
+2- index.js calls src/components/App2.js
+3- App2.js calls src/components/dynamicFormComponents/dynamicForm.js
+4- dynamicForm.js has all the code of render and logics. This file calls src/action/featureFlagSubmitState.js and return an action of redux to a reducer src/reducer/featureFlagReducer.js which updates the store on click submit state for any new feature added.
+
+### `Note`
+Redux thunk(Redux Middleware) support has been added, although redux saga is a later aim. To call the middleware change index.js for running App.js and it's store related variables. DO uncommenting as hints given
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
